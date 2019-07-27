@@ -11,8 +11,9 @@ class App extends Component {
   state = {
     friends,
     count:0,
-    arr:[]
-    };
+    arr:[],
+    correct:""
+      };
     handleClick = (event,id) => {
 
     // Filter this.state.friends for friends with an id not equal to the id being removed
@@ -23,12 +24,19 @@ class App extends Component {
     if(!this.state.arr.includes(id)){
       this.state.arr.push(id);
       this.setState({ count: this.state.count + 1 });
+      this.state.friends.sort(function(a, b) {
+        return b.id- a.id;
+      });
+      this.setState({correct:"Yay!! You guessed a new friend" })
+
 
     }
 else{
-  alert("Already clicked");
   this.setState({ count: 0,
-  arr:[] });
+  arr:[], friends:friends,
+  correct:"Oops!! You guessed a friend who was already clicked"
+
+});
 }
 
   };
@@ -40,6 +48,7 @@ else{
         <Title 
         title={"Memory Game"} 
           score={this.state.count}
+          correct={this.state.correct}
         >  
 
 
@@ -52,6 +61,7 @@ else{
             name={friend.name}
             image={friend.image}
             handleClick={this.handleClick}
+
           />
         ))}
       </Wrapper>
