@@ -1,0 +1,15 @@
+.cardContainer {
+    padding-top: 50px;
+    height: 100%;
+    width:80%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
+    /* -webkit-backface-visibility: hidden; */
+/* transform: translateZ(0) scale(1.0, 1.0); */
+
+    /* overflow: auto; */
+  }
+  

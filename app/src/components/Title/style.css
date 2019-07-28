@@ -1,17 +1,39 @@
 .title {
-  /* width: 100%;
-  text-align: center; */
+   /* width: 100%; */
+  text-align: center; 
   font-size: 3rem;
 }
 span{
-  margin:50px;
+  margin:20px;
 }
 .container{
-  /* width:100%; */
+  width:100%;
 
   position: absolute;
   top:0;
   padding:20px;
-  background-image: url(https://wallpaperplay.com/walls/full/3/5/c/73046.jpg);
+  background-image: url("https://us.123rf.com/450wm/olegganko/olegganko1410/olegganko141000183/32488047-red-sweater-texture-background-.jpg?ver=6");
+  box-shadow: 10px 10px 10px #999;
 
+
+}
+.score,.topScore{
+  float: right;
+  font-size:2em;
+}
+.correct{
+  margin-left:150px;
+  font-size:1.5em;
+  color:white;
+text-align: center;
+  animation:blinkingText 1s ;
+  animation-iteration-count: 2;
+
+}
+@keyframes blinkingText{
+	0%{		color:white;	}
+	49%{	color: transparent;	}
+	50%{	color: transparent;	}
+	99%{	color:transparent;	}
+	100%{	color:white;	}
 }
