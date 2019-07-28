@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "gh-pages": "^2.0.1",
-    "homepage": "https://github.com/abhinayaa1787/Clicky-Game",
+    "homepage": "https://abhinayaa1787.github.io/Clicky-Game/app",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
@@ -14,12 +14,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-      "predeploy": "npm run build",
-      "deploy": "gh-pages -d build",
-      "heroku-postbuild": "npm run build"
-
-     
-     
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
